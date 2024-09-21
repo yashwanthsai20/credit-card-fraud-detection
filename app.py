@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from xgboost import XGBClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
-
+ 
 app = Flask(__name__)
 df=pd.read_csv(r'C:\Users\new\PycharmProjects\CreditCard\TK12938\creditcard.csv')
 X = df.iloc[:,:-1]
