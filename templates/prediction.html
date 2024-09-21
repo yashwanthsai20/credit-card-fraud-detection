@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title></title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="static/assets/img/favicon.png" rel="icon">
+    <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+        <h1 class="logo mr-auto"><a href="/">CREDIT CARD FRAUDS</a></h1>
+
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/load">Load Data</a></li>
+                <li><a href="/preprocess">Preprocess Data</a></li>
+                <li><a href="viewdata">View Data</a></li>
+                <li><a href="/model">Select Model</a></li>
+                <li><a href="/prediction">Prediction</a></li>
+                <li><a href="/graph">Graphs</a></li>
+
+
+            </ul>
+        </nav><!-- .nav-menu -->
+
+
+
+    </div>
+</header><!-- End Header -->
+
+======= Hero Section =======
+<!--<section id="hero" class="d-flex justify-content-center align-items-center" style="height:800px">-->
+<!--style="right:3px"-->
+
+<center><h2 style="color:green;font-size: 50px;padding-top: 150px;"><b>{{msg}}</b></h2></center>
+
+     <form action="{{url_for('prediction')}}" method="post" style="display:table; " >
+        <div class="row" style="padding-top: 50px;">
+            <table><td>
+                <tr><td><label for="f1" class="label-pos">Time</label></td> <td><input type="text" name="f1" placeholder="Time"></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <td><label for="f11" class="label-pos" style="padding-left: 50px;">V10</label></td><td><input type="text" name="f11" placeholder="V10"></td><td><label for="f21" class="label-pos" style="padding-left: 50px;">V20</label></td><td><input type="text" name="f21" placeholder="V20"></td></tr>
+                <tr><td><label for="f2" class="label-pos">V1</label></td> <td><input type="text" name="f2" placeholder="V1"></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <td><label for="f12" class="label-pos" style="padding-left: 50px;">V11</label></td><td><input type="text" name="f12" placeholder="V11"></td><td><label for="f22" class="label-pos" style="padding-left: 50px;">V21</label></td><td><input type="text" name="f22" placeholder="V21"></td></tr>
+                <tr><td><label for="f3" class="label-pos">V2</label></td> <td><input type="text" name="f3" placeholder="V2"></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <td><label for="f13" class="label-pos" style="padding-left: 50px;">V12</label></td><td><input type="text" name="f13" placeholder="V12"></td><td><label for="f23" class="label-pos" style="padding-left: 50px;">V22</label></td><td><input type="text" name="f23" placeholder="V22"></td></tr>
+                <tr><td><label for="f4" class="label-pos">V3</label></td> <td><input type="text" name="f4" placeholder="V3"></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <td><label for="f14" class="label-pos" style="padding-left: 50px;">V13</label></td><td><input type="text" name="f14" placeholder="V13"></td><td><label for="f24" class="label-pos" style="padding-left: 50px;">V23</label></td><td><input type="text" name="f24" placeholder="V23"></td></tr>
+                <tr><td><label for="f5" class="label-pos">V4</label></td> <td><input type="text" name="f5" placeholder="V4"></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <td><label for="f15" class="label-pos" style="padding-left: 50px;">V14</label></td><td><input type="text" name="f15" placeholder="V14"></td><td><label for="f25" class="label-pos" style="padding-left: 50px;">V24</label></td><td><input type="text" name="f25" placeholder="V24"></td></tr>
+                <tr><td><label for="f6" class="label-pos">V5</label></td> <td><input type="text" name="f6" placeholder="V5"></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <td><label for="f16" class="label-pos" style="padding-left: 50px;">V15</label></td><td><input type="text" name="f16" placeholder="V15"></td><td><label for="f26" class="label-pos" style="padding-left: 50px;">V25</label></td><td><input type="text" name="f26" placeholder="V25"></td></tr>
+                <tr><td><label for="f7" class="label-pos">V6</label></td> <td><input type="text" name="f7" placeholder="V6"></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <td><label for="f17" class="label-pos" style="padding-left: 50px;">V16</label></td><td><input type="text" name="f17" placeholder="V16"></td><td><label for="f27" class="label-pos" style="padding-left: 50px;">V26</label></td><td><input type="text" name="f27" placeholder="V26"></td></tr>
+                <tr><td><label for="f8" class="label-pos">V7</label></td> <td><input type="text" name="f8" placeholder="V7"></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <td><label for="f18" class="label-pos" style="padding-left: 50px;">V17</label></td><td><input type="text" name="f18" placeholder="V17"></td><td><label for="f28" class="label-pos" style="padding-left: 50px;">V27</label></td><td><input type="text" name="f28" placeholder="V27"></td></tr>
+                <tr><td><label for="f9" class="label-pos">V8</label></td> <td><input type="text" name="f9" placeholder="V8"></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <td><label for="f19" class="label-pos" style="padding-left: 50px;">V18</label></td><td><input type="text" name="f19" placeholder="V18"></td><td><label for="f29" class="label-pos" style="padding-left: 50px;">V28</label></td><td><input type="text" name="f29" placeholder="V28"></td></tr>
+                <tr><td><label for="f10" class="label-pos">V9</label></td> <td><input type="text" name="f10" placeholder="V9"></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <td><label for="f20" class="label-pos" style="padding-left: 50px;">V19</label></td><td><input type="text" name="f20" placeholder="V19"></td><td><label for="f30" class="label-pos" style="padding-left: 50px;">Amount</label></td><td><input type="text" name="f30" placeholder="Amount"></td></tr>
+                <!--                        <td><td><label for="f10" class="label-pos">V9</label></td> <td><input type="text" placeholder="V9"></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <td>V19</td><td><input type="text" placeholder="V19"></td><td>Amount</td><td><input type="text" placeholder="Amount"></td></tr>-->
+            </table>
+
+            <center><div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--                {% if pred is not defined %}-->
+                <input type="submit" class="btn btn-primary" value="Predict" style="margin-left: 80px;">
+<!--                {% endif %}-->
+            </div>
+
+           </center>/</div></form>
+
+
+
+<!--    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">-->
+        <!--      <h1>Learning Today,<br>Leading Tomorrow</h1>-->
+        <!--      <h2>We are team of talented designers making websites with Bootstrap</h2>-->
+        <!--      <a href="courses.html" class="btn-get-started">Get Started</a>-->
+<!--    </div>-->
+
+
+<!--     </section>&lt;!&ndash; End Hero &ndash;&gt;-->
+
+
+
+<!-- Vendor JS Files -->
+<script src="static/assets/vendor/jquery/jquery.min.js"></script>
+<script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="static/assets/vendor/php-email-form/validate.js"></script>
+<script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="static/assets/vendor/counterup/counterup.min.js"></script>
+<script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="static/assets/vendor/aos/aos.js"></script>
+
+<!-- Template Main JS File -->
+<script src="static/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
